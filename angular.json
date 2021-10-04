@@ -196,17 +196,16 @@
         },
         "serve-ssr": {
           "builder": "@nguniversal/builders:ssr-dev-server",
+          "options": {
+            "browserTarget": "app:build",
+            "serverTarget": "app:server"
+          },
           "configurations": {
-            "development": {
-              "browserTarget": "app:build:development",
-              "serverTarget": "app:server:development"
-            },
             "production": {
               "browserTarget": "app:build:production",
               "serverTarget": "app:server:production"
             }
-          },
-          "defaultConfiguration": "development"
+          }
         },
         "prerender": {
           "builder": "@nguniversal/builders:prerender",
