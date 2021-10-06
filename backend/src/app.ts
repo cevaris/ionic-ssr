@@ -20,4 +20,4 @@ app.get("/favicon.ico", (req, res) => res.sendStatus(204));
 
 // import custom routes
 app.use(require("./routes"));
-// app.use(require("./routes/media"));
+app.use(require("./routes/munny/accounts"));
